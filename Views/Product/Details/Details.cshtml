@@ -262,6 +262,7 @@
                 <div class="ui two column grid">
                     <div class="column six wide mobile">
                         <h6 itemprop="productID" class="codProduto">@Model.Code</h6>
+                        @Html.Raw(Model.DescriptionDetailSummary)
                     </div>
                     <div class="column ten wide mobile">
                         <div class="avaliacoes">
@@ -312,6 +313,7 @@
                             <div class="ui two column grid stackable">
                                 <div class="column">
                                     <h6 itemprop="productID" class="codProduto">@Model.Code</h6>
+                                    @Html.Raw(Model.DescriptionDetailSummary)
                                 </div>
                                 <div class="column">
                                     <div class="avaliacoes">

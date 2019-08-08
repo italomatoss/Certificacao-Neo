@@ -31,20 +31,10 @@
   </div>
 }
 
-@section banner {
-  @if (Model != null)
-  {
-    @Html.Action("BannerCategory", "Banner", new { id = Model.IdCategory, type = 'F' })
-  }
-}
-
-@section footerHalfbanner {
-  @Html.Action("BannerCategory", "Banner", new { id = Model.IdCategory, type = 'R' })
-}
 
 @section filters {
-  <div class="four wide column filterColumn">
-    <div class="row one column filterBlock" id="filterBlock">
+  <div class="row filterColumn">
+    <div class="ui grid filterBlock" id="filterBlock">
       <!-- Page: ~/Views/Shared/Common/_FilterMenu.cshtml -->
       @if (LojaCorp.Control.Company._Company.ViewProductFiltersUrl)
       {
@@ -61,7 +51,7 @@
     </div>
   </div>
 }
-<div class="twelve wide column">
+<div class="row">
   <div class="ui grid">
     <div class="row one column">
       <div class="column right aligned right floated">

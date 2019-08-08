@@ -26,11 +26,14 @@
             slidesToShow: 3,
             mobileFirst:true,
             useTransform:false,
-            infinite:false
+            infinite:false,
+            vertical: true,
+            verticalSwiping: true
         });
     }
 </script>
-<div class="car-gallery thumbnails slick-dotted">
+
+<div class="car-gallery ui grid one column thumbnails slick-dotted slick-slider">
     @foreach (var item in Model)
     {
         <a href="@(item.ImageHighResolution != null ? item.ImageHighResolution : "#" )" data-standard="@item.ImageDefault">

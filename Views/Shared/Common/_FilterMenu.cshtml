@@ -1,10 +1,10 @@
 ﻿@model DomainProduct.Filters
-<div class="column" id="filter">
+<div class="ui grid" id="filter">
     <div class="ui labels">
 
     </div>
-    <div class="four wide column filtros" id="filtros">
-        <div class="ui grid one column">
+    <div class="ui centered filtros" id="filtros">
+        <div class="row">
             <div class="row">
                 <div class="row filterbar">
                     <div class="eight wide column">
@@ -14,8 +14,8 @@
                         <a class="ui button black icon closeFiltros"><i class="remove icon"></i></a>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="ui accordion" id="filtroList">
+                <div class="row">
+                    <div class="ui stackable four column grid accordion" id="filtroList">
                         @if (Model.References != null && Model.References.Count() > 0)
                         {
                             <!-- Page: ~/Views/Shared/Blocks/Product/_ReferencesFilters.cshtml -->
@@ -45,7 +45,7 @@
                 </div>
             </div>
                 <!-- Page: ~/Views/Shared/Blocks/Group/_GroupList.cshtml -->
-                @Html.Action("GroupList", "Group")
+                <!-- @Html.Action("GroupList", "Group") -->
         </div>
 
     </div>
